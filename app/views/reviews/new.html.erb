@@ -24,4 +24,5 @@
 
 <% end %>
 <br>
+<%= link_to "Back to #{@restaurant.name} Description Page", restaurant_path(params[:restaurant_id])  %> <br><br>
 <%= link_to "Back to All Restaurants", restaurants_path  %>
