@@ -15,4 +15,4 @@ Restaurant.create!(name: "French Place", address: "16 Main St.", city: "Boston",
 Restaurant.create!(name: "Gut house", address: "17 Main St.", city: "NYC", state: "NY", zipcode: "99929")
 Restaurant.create!(name: "Hut of waffle", address: "18 Main St.", city: "Chicago", state: "IL", zipcode: "99949")
 Restaurant.create!(name: "Igloo Food INC.", address: "19 Main St.", city: "Las Vegas", state: "NV", zipcode: "59999")
-Restaurant.create!(name: "Arbys 2", address: "20 Main St.", city: "Miami", state: "FL", zipcode: "19999")
+Restaurant.create!(name: "Arbys 2", address: "20 Main St.", city: "Miami", state: "FL", zipcode: "19999", description: "Home of the meat")
