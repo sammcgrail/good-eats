@@ -8,6 +8,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :zipcode, null: false
 
       t.string :description
+      t.string :category
 
       t.timestamps
     end

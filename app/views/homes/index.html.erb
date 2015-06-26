@@ -1,0 +1,10 @@
+<h3>List of 10 recently added restaurants</h3>
+
+  <ul>
+  <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %>, <%= "#{restaurant.city} (#{restaurant.state})" %></li>
+  <% end %>
+  </ul>
+
+
+  <%= link_to "All Restaurants", restaurants_path  %>

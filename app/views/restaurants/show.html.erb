@@ -1,14 +1,31 @@
 <h1><%= @restaurant.name %></h1>
 
-<h4>
+<p>
   Address:
   <%= @restaurant.address %>
   <%= @restaurant.city %>,
   <%= @restaurant.state %>
   <%= @restaurant.zipcode %>
-</h4>
+</p>
 
-Description:
+<h2>Description:</h2>
+
 <%= @restaurant.description %> <br><br>
+Category: <%= @restaurant.category %>
 
+<h3>Reviews:</h3>
+<% @restaurant.reviews.each do |review| %>
+
+<p>
+  Rating: <strong><%= review.rating %></strong> <br>
+  Body: <%= review.body %><br>
+  Created at: <%= review.created_at.time.to_formatted_s(:short) %>
+</p>
+  <br>
+
+<% end %>
+
+
+<br><br>
+<%= link_to "Review this Restaurant", new_restaurant_review_path(@id)  %> <br><br>
 <%= link_to "Back to All Restaurants", restaurants_path  %>

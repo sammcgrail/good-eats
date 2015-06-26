@@ -1,25 +1,42 @@
 <h1>New Restaurant Form</h1>
   <%= form_for(@restaurant) do |f| %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <% if @restaurant.errors.any? %>
+  <h3><%= pluralize(@restaurant.errors.count, "error") %>
+  prohibited this restaurant from being added.</h3>
 
-  <%= f.label :description %>
-  <%= f.text_area :description, rows: 2 %>
+  <ul>
+    <% @restaurant.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
 
-  <%= f.label :address %>
-  <%= f.text_field :address %>
+<p>
 
-  <%= f.label :city %>
-  <%= f.text_field :city %>
 
-  <%= f.label :state %>
-  <%= f.text_field :state %>
+  <p><%= f.label :name %>
+  <%= f.text_field :name %></p>
 
-  <%= f.label :zipcode %>
-  <%= f.text_field :zipcode %>
+  <p><%= f.label :description %>
+  <%= f.text_area :description, rows: 2 %></p>
+
+  <p><%= f.label :address %>
+  <%= f.text_field :address %></p>
+
+  <p><%= f.label :city %>
+  <%= f.text_field :city %></p>
+
+  <p><%= f.label :state %>
+  <%= f.text_field :state %></p>
+
+
+  <p><%= f.label :zipcode %>
+  <%= f.text_field :zipcode %></p>
 
   <%= f.submit %>
 
   <% end %>
   </div>
+<br><br>
+<%= link_to "Back to All Restaurants", restaurants_path  %>

@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150626135052) do
     t.string   "state",       null: false
     t.string   "zipcode",     null: false
     t.string   "description"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
