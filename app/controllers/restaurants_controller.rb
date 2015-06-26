@@ -3,6 +3,10 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.limit(10)
   end
 
+  def new
+    @restaurant = Restaurant.new
+  end
+
 
 
   private
